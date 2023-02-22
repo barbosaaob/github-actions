@@ -5,7 +5,7 @@ WORKDIR /actions-runner
 RUN apt-get update && apt-get upgrade -y && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 # Create and switch to runner user
-RUN useradd -s /usr/bin/bash runner && chown -R runner /actions-runner
+RUN useradd -m -s /usr/bin/bash runner && chown -R runner /actions-runner
 USER runner
 
 # Runner Download
