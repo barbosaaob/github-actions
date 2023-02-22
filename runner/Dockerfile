@@ -4,6 +4,9 @@ WORKDIR /actions-runner
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
+# Django needs sqlite3
+RUN apt-get update && apt-get install -y sqlite3 && rm -rf /var/lib/apt/lists/*
+
 # Create and switch to runner user
 RUN useradd -m -s /usr/bin/bash runner && chown -R runner /actions-runner
 USER runner
