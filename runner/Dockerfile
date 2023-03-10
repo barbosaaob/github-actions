@@ -13,7 +13,7 @@ USER runner
 
 # Runner Download
 ARG ARCH=x64
-ARG VERSION=2.301.1
+ARG VERSION=2.303.0
 RUN curl -o actions-runner-linux-$ARCH-$VERSION.tar.gz -L https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-$ARCH-$VERSION.tar.gz && tar xzf ./actions-runner-linux-$ARCH-$VERSION.tar.gz && rm ./actions-runner-linux-$ARCH-$VERSION.tar.gz
 
 # Switch back to root to install dependencies
